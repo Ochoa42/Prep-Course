@@ -177,11 +177,19 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if ((Math.sign(numero) === -1) || (Math.sign(numero) === -0)) {
-        return "Es Positivo";
+  var boll = false;
+  if (Math.sign(numero) === -1 ) {
+    return "Es negativo";
   }
   else {
-    return "Es Negativo";
+    if (Math.sign(numero) === 1) {
+      return "Es positivo";
+    }
+    else {
+      if ((Math.sign(numero) === 0) || (Math.sign(numero) === -0)) {
+           return boll;
+      }
+    }
   }
 }
 
@@ -203,7 +211,8 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "hola"+" "+nombre+"!";
+  return "Hola"+" "+nombre+"!";
+
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
